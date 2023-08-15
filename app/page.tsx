@@ -1,14 +1,17 @@
-import React from 'react';
+import Head from "next/head";
+import MovieSearch from "./components/MovieSearch";
 
-const Home: React.FC = (): JSX.Element => {
+const Home = () => {
   return (
-    <div className="flex space-x-4 justify-center my-9">
-      <h1 className="border w-48 text-center text-green-500">
-        Hello world!!
-      </h1>
-      <h2 className="border w-48 m-auto text-center text-blue-600">
-        Hello world!!
-      </h2>
+    <div className="bg-black min-h-screen">
+      <Head>
+        <title>Movie database</title>
+        <meta name="description" content="a simple movie database" />
+      </Head>
+      <main className="container mx-auto py-10 px-4 flex flex-col items-center justify-center">
+        <h1 className="text-4xl font-bold mb-8 text-white">Movie database</h1>
+        <MovieSearch />
+      </main>
     </div>
   );
 };
